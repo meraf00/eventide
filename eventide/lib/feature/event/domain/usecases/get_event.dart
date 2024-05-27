@@ -1,6 +1,6 @@
 import '../../../../core/usecase/usecase.dart';
 import '../entities/event.dart';
-import '../repository/event_repository.dart';
+import '../repositories/event_repository.dart';
 
 class GetEvent extends UseCase<StreamFailureOr<Event>, GetEventParams> {
   final EventRepository repository;
