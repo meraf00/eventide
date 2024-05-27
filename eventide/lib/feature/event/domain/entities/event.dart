@@ -47,4 +47,31 @@ class Event extends Equatable {
         news,
         sessions,
       ];
+
+  factory Event.factory({
+    String id = '',
+    required String name,
+    required String description,
+    String bgImageUrl = '',
+    String logoUrl = '',
+    DateTime? date,
+    Address? address,
+    Organizer? organizer,
+    List<Participant>? participants,
+    List<News>? news,
+    List<Session>? sessions,
+  }) =>
+      Event(
+        id: '',
+        name: name,
+        description: description,
+        date: date ?? DateTime.now(),
+        bgImageUrl: bgImageUrl,
+        logoUrl: logoUrl,
+        address: address ?? Address.factory(),
+        organizer: organizer ?? Organizer.factory(),
+        participants: participants ?? [],
+        news: news ?? [],
+        sessions: sessions ?? [],
+      );
 }

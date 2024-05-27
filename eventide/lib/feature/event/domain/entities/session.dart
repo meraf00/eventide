@@ -13,7 +13,7 @@ class Session extends Equatable {
   final String logoUrl;
   final String location;
   final List<Participant> participants;
-  final Tag tag;
+  final List<Tag> tags;
 
   const Session({
     required this.id,
@@ -25,7 +25,7 @@ class Session extends Equatable {
     required this.bgImageUrl,
     required this.logoUrl,
     required this.participants,
-    required this.tag,
+    required this.tags,
   });
 
   @override

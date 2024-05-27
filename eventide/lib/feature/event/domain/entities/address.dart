@@ -19,4 +19,22 @@ class Address extends Equatable {
 
   @override
   List<Object?> get props => [name, address, city, state, country, zipCode];
+
+  factory Address.factory({
+    String name = '',
+    String address = '',
+    String city = '',
+    String state = '',
+    String country = '',
+    String zipCode = '',
+  }) {
+    return Address(
+      name: name,
+      address: address,
+      city: city,
+      state: state,
+      country: country,
+      zipCode: zipCode,
+    );
+  }
 }

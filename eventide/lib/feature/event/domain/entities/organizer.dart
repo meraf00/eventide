@@ -15,4 +15,18 @@ class Organizer extends Equatable {
 
   @override
   List<Object?> get props => [id, name, bio, photoUrl];
+
+  factory Organizer.factory({
+    String id = '',
+    String name = '',
+    String bio = '',
+    String photoUrl = '',
+  }) {
+    return Organizer(
+      id: id,
+      name: name,
+      bio: bio,
+      photoUrl: photoUrl,
+    );
+  }
 }
